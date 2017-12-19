@@ -1,0 +1,13 @@
+#!/bin/bash
+cd "$(dirname "$0")"
+exec java -Xms1G -Xmx1G -d64 -jar spigot-1.12.2.jar nogui
+
+read -r -p "Are you sure? [y/N] " response
+if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
+then
+    do_something
+else
+    do_something_else
+fi
+
+sed -i -e 's/eula=false/eula=true/g' eula.txt

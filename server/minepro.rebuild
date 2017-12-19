@@ -1,0 +1,55 @@
+#!/bin/bash
+
+if 
+          rm -rf server.properties
+
+echo "SERVER PROPERTIES SUCCESSFULLY THROWN IN THE GARBAGE"
+
+touch server.properties
+echo "REBUILDING MINEPRO SETTINGS NOW..."
+sleep 3
+
+echo -e '#Minecraft server properties' >> server.properties
+echo -e '#Sun Oct 08 16:00:08 EDT 2017' >> server.properties
+echo -e 'generator-settings=' >> server.properties
+echo -e 'op-permission-level=4' >> server.properties
+echo -e 'allow-nether=true' >> server.properties
+echo -e 'level-name=Earth' >> server.properties
+echo -e 'enable-query=false' >> server.properties
+echo -e 'allow-flight=false' >> server.properties
+echo -e 'prevent-proxy-connections=false' >> server.properties
+echo -e 'server-port=25252' >> server.properties
+echo -e 'max-world-size=20000000' >> server.properties
+echo -e 'level-type=DEFAULT' >> server.properties
+echo -e 'enable-rcon=false' >> server.properties
+echo -e 'level-seed=' >> server.properties
+echo -e 'force-gamemode=false' >> server.properties
+echo -e 'server-ip=' >> server.properties
+echo -e 'network-compression-threshold=256' >> server.properties
+echo -e 'max-build-height=256' >> server.properties
+echo -e 'spawn-npcs=true' >> server.properties
+echo -e 'white-list=false' >> server.properties
+echo -e 'spawn-animals=true' >> server.properties
+echo -e 'hardcore=false' >> server.properties
+echo -e 'snooper-enabled=true' >> server.properties
+echo -e 'resource-pack-sha1=' >> server.properties
+echo -e 'online-mode=true' >> server.properties
+echo -e 'resource-pack=' >> server.properties
+echo -e 'pvp=true' >> server.properties
+echo -e 'difficulty=3' >> server.properties
+echo -e 'enable-command-block=false' >> server.properties
+echo -e 'gamemode=0' >> server.properties
+echo -e 'player-idle-timeout=0' >> server.properties
+echo -e 'max-players=25' >> server.properties
+echo -e 'spawn-monsters=true' >> server.properties
+echo -e 'generate-structures=true' >> server.properties
+echo -e 'view-distance=12' >> server.properties
+echo -e 'motd=MinePro.net by Anathi Keswa' >> server.properties
+sleep 2
+
+echo "GIVE RUNTIME PERMISSIONS TO SERVER.PROPERTIES?"
+sudo chmod a+x ~/Documents/dev/gitrepos/minepro/server/server.properties
+sleep 3
+
+echo "PROCEEDING TO REBUILD MINEPRO SERVER..."
+. minepro.start
